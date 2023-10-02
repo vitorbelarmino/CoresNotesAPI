@@ -41,6 +41,9 @@ $ npm install
 # Suba o banco de dados com Docker
 $ npm run db:up
 
+# rode as migration
+$ npx prisma migrate dev
+
 # Execute a aplicação
 $ npm run dev
 
