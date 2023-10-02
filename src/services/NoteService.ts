@@ -39,6 +39,14 @@ class NoteService {
   }
 
   public async delete(id: string) {
+    const note = await prisma.user.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    if (!note) throw new CustomError(404, 'Nota não encontrada');
+
     await prisma.note.delete({
       where: {
         id,
