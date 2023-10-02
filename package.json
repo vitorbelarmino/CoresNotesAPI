@@ -46,7 +46,7 @@
     "v8-compile-cache-lib": "^3.0.1",
     "yn": "^3.1.1"
   },
-  "description": ""
+  "description": "",
     "engines": {
     "node": "^16.15.0",
     "npm": "^8.5.5"
