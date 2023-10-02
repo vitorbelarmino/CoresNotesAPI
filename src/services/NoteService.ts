@@ -1,8 +1,17 @@
 import prisma from '../../prisma/script';
 import { INote } from '../interfaces/INotes';
+import CustomError from '../utils/customError';
 
 class NoteService {
   public async create(note: INote) {
+    const user = await prisma.user.findUnique({
+      where: {
+        id: note.userId,
+      },
+    });
+
+    if (!user) throw new CustomError(404, 'Usuário não encontrado');
+
     const newNote = await prisma.note.create({
       data: {
         title: note.title,
@@ -14,7 +23,15 @@ class NoteService {
     return newNote;
   }
 
-  public async getById(id: string) {
+  public async getAllNotesUser(id: string) {
+    const user = await prisma.user.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    if (!user) throw new CustomError(404, 'Usuário não encontrado');
+
     const data = await prisma.note.findMany({
       where: {
         userId: id,
