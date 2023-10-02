@@ -3,6 +3,8 @@ import 'dotenv/config';
 import express from 'express';
 import { router } from './routes/index';
 import { globalError } from './middleware/GlobalError';
+import swaggerDocs from './swagger.json';
+import swaggerUi from 'swagger-ui-express';
 
 class App {
   public app: express.Express;
@@ -10,6 +12,7 @@ class App {
     this.app = express();
     this.config();
     this.app.use(express.json());
+    this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
     this.app.use(router);
     this.app.use(globalError);
   }
