@@ -2,6 +2,9 @@
   "name": "coresnotesapi",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "db:up": "docker-compose up --build -d",
     "dev": "nodemon --watch \"./src/**\" ./src/server.ts"
