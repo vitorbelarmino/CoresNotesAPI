@@ -9,7 +9,7 @@
     "dev": "nodemon --watch \"./src/**\" ./src/server.ts",
     "db:up": "docker-compose up --build -d",
     "build": "tsc",
-    "start": "node ./server.js"
+    "start": "node ./src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.3.1",
+    "@vercel/node": "^3.0.6",
     "acorn": "^8.10.0",
     "acorn-walk": "^8.2.0",
     "arg": "^4.1.3",
