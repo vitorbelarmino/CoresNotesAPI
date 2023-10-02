@@ -2,9 +2,6 @@
   "name": "coresnotesapi",
   "version": "1.0.0",
   "main": "index.js",
-    "engines": {
-    "node": ">=16.13"
-  },
   "scripts": {
     "dev": "nodemon --watch \"./src/**\" ./src/server.ts",
     "db:up": "docker-compose up --build -d",
@@ -50,4 +47,8 @@
     "yn": "^3.1.1"
   },
   "description": ""
+    "engines": {
+    "node": "^16.15.0",
+    "npm": "^8.5.5"
+  }
 }
