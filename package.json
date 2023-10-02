@@ -6,8 +6,10 @@
     "node": "18.x"
   },
   "scripts": {
+    "dev": "nodemon --watch \"./src/**\" ./src/server.ts",
     "db:up": "docker-compose up --build -d",
-    "dev": "nodemon --watch \"./src/**\" ./src/server.ts"
+    "build": "tsc",
+    "start": "node ./server.js"
   },
   "keywords": [],
   "author": "",
