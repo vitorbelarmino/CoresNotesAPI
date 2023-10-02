@@ -2,6 +2,9 @@
   "name": "coresnotesapi",
   "version": "1.0.0",
   "main": "index.js",
+    "engines": {
+    "node": ">=16.13"
+  },
   "scripts": {
     "dev": "nodemon --watch \"./src/**\" ./src/server.ts",
     "db:up": "docker-compose up --build -d",
@@ -28,9 +31,6 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "engines": {
-      "Node": ">=16.13",
-    }
     "@prisma/client": "^5.3.1",
     "@vercel/node": "^3.0.6",
     "acorn": "^8.10.0",
