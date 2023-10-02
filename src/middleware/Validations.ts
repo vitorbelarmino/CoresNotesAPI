@@ -22,8 +22,6 @@ export class Validade {
     next: NextFunction,
   ) {
     const body = req.body;
-    console.log(body);
-
     const { error } = updateNoteSchema.validate(body);
     if (!error) {
       return next();

@@ -7,7 +7,7 @@ const router = Router();
 export { router };
 router
   .post('/user/create', userController.create)
+  .get('/user/:id/notes', userController.getAllNotesUser)
   .post('/note/create', Validade.createNoteValidade, noteController.create)
-  .get('/note/:id', noteController.getById)
-  .put('/note/:id', Validade.updateNoteValidade, noteController.update)
-  .delete('/note/:id', noteController.delete);
+  .put('/note/update/:id', Validade.updateNoteValidade, noteController.update)
+  .delete('/note/delete/:id', noteController.delete);
