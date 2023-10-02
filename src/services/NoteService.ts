@@ -23,26 +23,6 @@ class NoteService {
     return newNote;
   }
 
-  public async getAllNotesUser(id: string) {
-    const user = await prisma.user.findUnique({
-      where: {
-        id,
-      },
-    });
-
-    if (!user) throw new CustomError(404, 'Usuário não encontrado');
-
-    const data = await prisma.note.findMany({
-      where: {
-        userId: id,
-      },
-      orderBy: {
-        createdAt: 'asc',
-      },
-    });
-    return data;
-  }
-
   public async update(id: string, note: INote) {
     const updatedNote = await prisma.note.update({
       where: {

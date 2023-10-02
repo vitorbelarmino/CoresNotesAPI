@@ -8,12 +8,6 @@ class NoteController {
     res.status(201).json(newNote);
   }
 
-  public async getById(req: Request, res: Response) {
-    const { id } = req.params;
-    const data = await noteService.getById(id);
-    res.status(200).json(data);
-  }
-
   public async update(req: Request, res: Response) {
     const { id } = req.params;
     const body = req.body;
