@@ -1,7 +1,7 @@
 # CoresNotesAPI
 
 ## 💻 Projeto
-  "Este é um aplicativo de notas autoadesivas que permite aos usuários criar, editar, marcar como favoritas e excluir notas. O projeto é FullStack e inclui o repositório do front-end, que pode ser encontrado em: https://github.com/vitorbelarmino/CoresNotesAPP."
+  Este é um aplicativo de notas autoadesivas que permite aos usuários criar, editar, marcar como favoritas e excluir notas. O projeto é FullStack e inclui o repositório do front-end, que pode ser encontrado em: https://github.com/vitorbelarmino/CoresNotesAPP.
 </br>
 
 ## 🚀 Tecnologias
