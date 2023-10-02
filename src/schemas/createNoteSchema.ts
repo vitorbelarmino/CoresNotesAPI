@@ -20,7 +20,7 @@ const messagesError = {
 
 export const createNoteSchema = Joi.object({
   title: Joi.string().required().messages(messagesError.title),
-  content: Joi.string().required().messages(messagesError.title),
+  content: Joi.string().required().messages(messagesError.content),
   favorite: Joi.boolean().messages(messagesError.favorite),
-  userId: Joi.string().required().messages(messagesError.title),
+  userId: Joi.string().required().messages(messagesError.userId),
 });

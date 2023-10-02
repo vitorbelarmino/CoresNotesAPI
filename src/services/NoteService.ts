@@ -39,7 +39,7 @@ class NoteService {
   }
 
   public async delete(id: string) {
-    const note = await prisma.user.findUnique({
+    const note = await prisma.note.findUnique({
       where: {
         id,
       },

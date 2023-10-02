@@ -12,7 +12,11 @@ class UserService {
         id,
       },
       select: {
-        notes: true,
+        notes: {
+          orderBy: {
+            createdAt: 'asc',
+          },
+        },
       },
     });
     return data;
